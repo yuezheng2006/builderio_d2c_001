@@ -12,7 +12,8 @@
     "build-only": "vite build",
     "type-check": "vue-tsc --build",
     "lint": "eslint . --fix",
-    "format": "prettier --write src/"
+    "format": "prettier --write src/",
+    "builder-figma-publish": "npx builder.io figma publish"
   },
   "dependencies": {
     "@builder.io/dev-tools": "^1.2.3",
