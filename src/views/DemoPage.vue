@@ -9,7 +9,12 @@
         </el-menu>
       </nav>
     </header>
-
+    <div class="action-button-container">
+      <div>
+        <el-link type="primary" href="https://www.baidu.com">action link</el-link>
+      </div>
+      <el-button type="primary" @click="handleClick">action button</el-button>
+    </div>
     <main class="demo-content">
       <template v-if="isLoading">
         <div class="loading">
@@ -42,6 +47,10 @@ const content = ref<BuilderContent | null>(null)
 const canShowContent = ref(false)
 const apiKey = 'c3f12d55dfe8411e8f06a4c982cd5303'
 const model = 'page'
+
+const handleClick = () => {
+  alert('click')
+}
 
 onMounted(async () => {
   try {
@@ -101,5 +110,10 @@ onMounted(async () => {
   .demo-content {
     padding: 1rem;
   }
+}
+
+.action-button-container {
+  padding: 20px;
+  margin: 10px auto;
 }
 </style>
